@@ -79,7 +79,7 @@ export async function run(): Promise<void> {
     core.endGroup();
 
     core.startGroup('Push the commit or tag');
-    await push(inps.PublishBranch, inps.ForceOrphan);
+    await push(inps.PublishBranch, true);
     await pushTag(inps.TagName, inps.TagMessage);
     core.endGroup();
 
